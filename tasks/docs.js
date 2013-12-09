@@ -53,7 +53,7 @@ module.exports = function (grunt) {
           var title = name.replace(/-/g,' ').replace('.md', ''),
             segment = name.replace(/ /g,'-').replace('.md', '').toLowerCase(),
             src = base + name,
-            dest = 'build/docs/' + name.replace('.md', '').toLowerCase() + '.html';
+            dest = 'build/' + name.replace('.md', '').toLowerCase() + '.html';
 
           grunt.file.copy(src, dest, {
             process:function (src) {

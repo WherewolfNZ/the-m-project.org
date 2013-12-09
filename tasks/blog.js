@@ -101,26 +101,6 @@ module.exports = function (grunt) {
     grunt.file.write('build/blog.html', blogOut);
 
     /**
-     * Generate the RSS feed
-     */
-    grunt.log.ok('Generating rss feed...');
-    // remove anchors from RSS setting
-    marked.setOptions({
-      anchors:false
-    });
-    // generate the feed items with different 'marked' settings
-    shortList.forEach(function (item) {
-      item.rssSrc = marked(item.rawSrc);
-      item.atomId = blog.atomIDnTimeStampChurner(item.url, item.postRawDate);
-    });
-    var rssTpl = 'src/tmpl/rss.jade';
-    var rssOut = jade.compile(grunt.file.read(rssTpl), {filename:rssTpl})({
-      page:'rss',
-      posts:shortList
-    });
-    grunt.file.write('build/atom.xml', rssOut);
-
-    /**
      * Generate the front page
      */
     grunt.log.ok('Generating the front page...');

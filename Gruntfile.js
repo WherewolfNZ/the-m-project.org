@@ -4,16 +4,20 @@ module.exports = function(grunt) {
   // Load all grunt tasks matching the `grunt-*` pattern.
   require('load-grunt-tasks')(grunt);
 
+  var LIVERELOAD_PORT = 35729;
+  var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
+  var mountFolder = function( connect, dir ) {
+    return connect.static(require('path').resolve(dir));
+  };
+
   // Project configuration.
   grunt.initConfig({
-    // server port, used to serve the site and run tests
-    server_port: 5678,
     // wiki url
     wiki_url: 'https://github.com/gruntjs/grunt-docs.git',
     // If local is true retrieve the docs from the local
     // grunt-docs which is expected to sit in the
     // same dir as this one.
-    local: false,
+    local: true,
     // wiki file check, file that exists in the wiki for sure
     wiki_file: 'grunt.md',
     // clean directories
@@ -43,13 +47,16 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: LIVERELOAD_PORT
+      },
       less: {
         files: 'src/less/*.less',
         tasks: ['less:development']
       },
       tmpl: {
         files: 'src/tmpl/**/*.jade',
-        tasks: ['jade', 'default']
+        tasks: ['default']
       },
       js: {
         files: 'src/js/**',
@@ -69,34 +76,21 @@ module.exports = function(grunt) {
       }
     },
 
-    // compile page layouts
-    jade: {
-      notfound: {
-        options: {
-          data: {
-            page: 'notfound',
-            title: '404 Not Found'
-          }
-        },
-        files: {
-          'build/404.html': 'src/tmpl/404.jade'
-        }
-      }
-    },
-
     concat: {
       // if we add more js, modify this properly
-      plugins: {
+      vendor: {
         src: [
-          'src/js/vendor/lib/jquery.js',
-          'src/js/vendor/lib/lodash.js',
-          'src/js/vendor/*.js',
+          'bower_components/modernizr/modernizr.js'
+        ],
+        dest: 'build/js/vendor.js'
+      },
+      page: {
+        src: [
           'src/js/*.js'
         ],
-        dest: 'build/js/plugins.js'
+        dest: 'build/js/page.js'
       }
     },
-
     jshint: {
       all: ['Gruntfile.js', 'tasks/*.js'],
       options: {
@@ -120,7 +114,7 @@ module.exports = function(grunt) {
     copy: {
       assets: {
         files: [
-          {expand: true, cwd: 'src/', src: ['img/**', 'cdn/**', 'fonts/**', 'js/vendor/lib/modernizr.min.js'], dest: 'build/'}
+          {expand: true, cwd: 'src/', src: ['img/**'], dest: 'build/'}
         ]
       },
       root: {
@@ -133,15 +127,27 @@ module.exports = function(grunt) {
       all: ['test/*_test.js']
     },
 
+    // Server
+    connect: {
+      options: {
+        port: 9000,
+        hostname: 'localhost'
+      },
+      page: {
+        options: {
+          middleware: function( connect ) {
+            return [
+              lrSnippet, mountFolder(connect, 'build')
+            ];
+          }
+        }
+      }
+    },
     // Open the local server.
     open: {
       dev: {
-        path: 'http://localhost:<%= server_port %>/'
+        path: 'http://localhost:<%= connect.options.port %>/'
       }
-    },
-
-    concurrent: {
-      server: ['server', 'open']
     }
   });
 
@@ -151,9 +157,7 @@ module.exports = function(grunt) {
   // Load local tasks
   grunt.loadTasks('tasks'); // getWiki, docs tasks
 
-  grunt.registerTask('build', ['clean', 'copy', 'jade', 'docs', 'blog', 'plugins', 'concat']);
+  grunt.registerTask('build', ['clean', 'copy', 'docs', 'blog', 'concat']);
   grunt.registerTask('default', ['build', 'less:production']);
-  grunt.registerTask('dev', ['build', 'less:development', 'jshint', 'watch']);
-  grunt.registerTask('test', ['nodeunit']);
-  grunt.registerTask('serve', ['concurrent:server']);
-};
+  grunt.registerTask('dev', ['build', 'less:development', 'jshint', 'connect', 'open', 'watch']);
+  grunt.registerTask('test', ['nodeunit']);};
