@@ -31,7 +31,7 @@ module.exports = function (grunt) {
        *
        */
 
-      var base = local ? 'grunt-docs/' : 'tmp/wiki/';
+      var base = local ? 'content/' : 'tmp/';
 
       /**
        * Generate grunt guides documentation
@@ -96,7 +96,6 @@ module.exports = function (grunt) {
         names.push('grunt');
         // TODO: temporary store for these
         names.push('Inside-Tasks');
-        names.push('Exit-Codes');
 
         // get docs sidebars
         sidebars[0] = getSidebarSection('## API', 'icon-cog');

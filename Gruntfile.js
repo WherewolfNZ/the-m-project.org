@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     // wiki url
-    wiki_url: 'https://github.com/gruntjs/grunt-docs.git',
+    //wiki_url: 'https://github.com/gruntjs/grunt-docs.git',
     // If local is true retrieve the docs from the local
     // grunt-docs which is expected to sit in the
     // same dir as this one.
@@ -70,8 +70,8 @@ module.exports = function(grunt) {
         files: 'Gruntfile.js',
         tasks: ['default']
       },
-      docs: {
-        files: 'grunt-docs/**',
+      content: {
+        files: 'content/**',
         tasks: ['default']
       }
     },
