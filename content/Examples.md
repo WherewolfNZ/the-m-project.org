@@ -1,27 +1,14 @@
-# h1
-## h2
-### h3
-#### h4 has border bottom
-##### h5
-###### h6
 
-This is a paragraph
 
-#### Unordered list
-* item1
-* item2
-* item3
-* item4
+### Kitchensink Demo
 
-#### Ordered list
-1.  ordered1
-2.  ordered2
-3.  ordered3
+The Kitchensink gives a good overview of all Views and Layouts so far. Play around and see what the The-M-Project offers to you. Beside the Kitchensink we have a second ready to launch sample app called Addressbook.
 
-#### Links
-__[This is a standalone link]__
+[![Try the Kitchensink](/img/try-kitchensink.png)](http://www.the-m-project.org/apps/absinthe/kitchensink/index.html)
 
-#### Images
-![This is an image](/img/html5.png)
 
-[This is a standalone link]: https://npmjs.org/
+### Addressbook Demo
+
+The Addressbook is the sample app for [Bikini](#bikini). [Open the app](http://www.the-m-project.org/apps/absinthe/addressbook/index.html) in different browser windows or devices for the full experience. A small [node.js](http://nodejs.org/) server is connected to a [MongoDB](http://www.mongodb.org/). The application syncronises via bikini the contact collection and stores it to the [WebSQL](http://en.wikipedia.org/wiki/Web_SQL_Database) Database. This guarantees offline and online manipulation of the data.
+
+[![Try the Addressbook](/img/try-addressbook.png)](http://www.the-m-project.org/apps/absinthe/addressbook/index.html)

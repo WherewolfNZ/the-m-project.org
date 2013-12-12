@@ -1,12 +1,13 @@
 ## Getting started
-* [[Getting Started sub]]
-* [[Bikini]]
+* [[Getting Started]]
+* [[Generator wizard]]
+* [[Layouts]]
 
 ## Bikini
-* [[Bikini sub]]
-
-## Examples
-* [[Examples sub]]
+* [[Bikini]]
 
 ## Community
-* [[Community sub]]
+* [[Community]]
+
+## Documentation
+* [[Documentation]]
