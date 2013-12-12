@@ -71,7 +71,6 @@ module.exports = function (grunt) {
                     }
                 }
             });
-            grunt.log.ok('dead', sb, title);
 
           grunt.file.copy(src, dest, {
             process:function (src) {
