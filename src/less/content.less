@@ -32,27 +32,16 @@
 
     a {
       font-size: 18px;
-      padding: 10px;
-      background-color: @grey-background;
-      border-radius: 4px;
-      .transition(all 0.5s 0s);
-
-      &:hover,
-      &:focus {
-        background-color: @white;
-        color: @blue-links;
-      }
+      .link;
     }
+  }
 
-    &.docs {
-      margin: 0;
-      padding: 0;
+  pre {
+    border-radius: 5px;
 
-      a {
-        .link;
-        color: @blue-links;
-        background-color: @white;
-      }
+    code {
+      background: @grey-code-background;
+      border-radius: 5px;
     }
   }
 

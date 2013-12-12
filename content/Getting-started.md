@@ -18,8 +18,16 @@ This is a paragraph
 2.  ordered2
 3.  ordered3
 
+
+### Code
+ ```javascript
+ var s = "JavaScript syntax highlighting";
+ alert(s);
+ ```
+
 #### Links
 __[This is a standalone link]__
+[here](generator-wizard)
 
 #### Images
 ![This is an image](/img/html5.png)
