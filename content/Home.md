@@ -1,6 +1,7 @@
 
 ## Documentation
 * [[Getting Started]]
+* [[Data]]
 
 ### Advanced
 * [[Project Scaffolding]]
@@ -12,5 +13,3 @@
 * [[grunt]]
 * [[grunt.config]]
 
-### Other
-* [[Inside Tasks]]
