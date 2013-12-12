@@ -1,27 +1,3 @@
-# h1
-## h2
-### h3
-#### h4 has border bottom
-##### h5
-###### h6
+Without expense to the developer, data is synchronised from the server to the client. Changes are broadcast to all connected clients live, are available offline and changeable, and by limiting the transfer of modified records loading time and traffic can be optimised.
 
-This is a paragraph
-
-#### Unordered list
-* item1
-* item2
-* item3
-* item4
-
-#### Ordered list
-1.  ordered1
-2.  ordered2
-3.  ordered3
-
-#### Links
-__[This is a standalone link]__
-
-#### Images
-![This is an image](/img/html5.png)
-
-[This is a standalone link]: https://npmjs.org/
+Bikini is the connection between the Model and a Storage. It provides several adapters to access local and remote data storage.

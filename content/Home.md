@@ -13,8 +13,7 @@
 * [[Generator wizard]]
 * [[Layouts]]
 
-## Bikini
-* [[Bikini]]
-
-## Community
-* [[Community]]
+## Generator
+* [[Getting Started]]
+* [[Generator wizard]]
+* [[Generator Layouts]]
