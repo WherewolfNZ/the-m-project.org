@@ -1,5 +1,6 @@
 ## Getting started
 * [[Getting Started]]
+* [[Generator wizard]]
 
 ## Bikini
 * [[Bikini]]

@@ -1,27 +1,27 @@
-# h1
-## h2
-### h3
-#### h4 has border bottom
-##### h5
-###### h6
+# Installation
 
-This is a paragraph
+Install the generator if you haven't already. Make sure you have installed [Node.js](http://nodejs.org), [Git](http://git-scm.com/) and optionally, [Ruby](http://www.ruby-lang.org) and [Compass](http://compass-style.org/) (if you plan to use Sass).
 
-#### Unordered list
-* item1
-* item2
-* item3
-* item4
+```
+npm install -g generator-m
+```
 
-#### Ordered list
-1.  ordered1
-2.  ordered2
-3.  ordered3
+# Creating a new Project
 
-#### Links
-__[This is a standalone link]__
+Create a folder and name it after the application name and open it. 
 
-#### Images
-![This is an image](/img/html5.png)
+```
+mkdir my-new-project && cd $_
+```
 
-[This is a standalone link]: https://npmjs.org/
+Inside of the folder run the The-M-Project generator. You find detail to the generator configurtion steps [here](generator-wizard.html).
+
+```
+yo m
+```
+
+After all the dependencies are installed, start the server. 
+
+```
+grunt server
+```
