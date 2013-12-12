@@ -1,4 +1,4 @@
-# Data Handling (Models / Collections and Stores)
+# Data Handling - Models, Collections and Stores
 All data handling with models and collections are based on [backbone.js](http://backbonejs.org), so please see their website for all the basics.
  
 ## M.Model
