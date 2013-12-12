@@ -45,9 +45,11 @@ module.exports = function (grunt) {
 
         //These are just the title of the navigation, they will be hidden with css because they do not provide linking
         sidebars[0] = getSidebarSection('## Getting started');
-        sidebars[1] = getSidebarSection('## Bikini');
-        sidebars[2] = getSidebarSection('## Examples');
-        sidebars[3] = getSidebarSection('## Community');
+        sidebars[1] = getSidebarSection('## Generator wizard');
+        sidebars[2] = getSidebarSection('## Layouts');
+        sidebars[3] = getSidebarSection('## Bikini');
+        sidebars[4] = getSidebarSection('## Examples');
+        sidebars[5] = getSidebarSection('## Community');
 
         names.forEach(function (name) {
 
@@ -63,10 +65,13 @@ module.exports = function (grunt) {
 
             var sb = [];
             sidebars.forEach(function(sidebar){
-                if(sidebar[0].name === title){
-                    sb = sidebar;
+                if(sidebar && sidebar[0] && sidebar[0].name){
+                    if(sidebar[0].name === title){
+                        sb = sidebar;
+                    }
                 }
             });
+            grunt.log.ok('dead', sb, title);
 
           grunt.file.copy(src, dest, {
             process:function (src) {
@@ -159,7 +164,6 @@ module.exports = function (grunt) {
           else if (line.substring(0,2) === '##') { rMode = false; }
 
           if (rMode && line.length > 0) {
-              grunt.log.ok('dead', line);
             var item = line.replace(/#/g,'').replace(']]', '').replace('* [[', ''),
               url = item;
             if (item[0] === ' ') {
