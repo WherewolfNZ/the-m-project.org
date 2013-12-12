@@ -1,30 +1,19 @@
 
-The generator guides you through several configuration steps
+The generator guides you through several configuration steps.
 
-## Select a Template
-1. First you have to choose a basic template of your application. You find details to all the available templates [here](#).
+## 1. Select a Template
+![Step 1](/img/wizard/step1.jpg)
+
+First you have to choose a basic template of your application. You find details to all the available templates [here](layouts.html).
 
 
-## Work with or without Sass
-It is up to you if you want to use Sass inside of your project or not.
-If you want to use Sass we recommend Compass.
+## 2. Work with or without Sass
+![Step 2](/img/wizard/step2.jpg)
 
-## Layouts 
-A template defines the look and feel of a page. Every Controller can set its own template or use a existing one from other controllers. After the layout is set the Controller add its Views to the Layout. This triggers the render process of the inserted Views.
+It is up to you if you want to use Sass inside of your project or not. If you want to use Sass we recommend Compass.
 
-### Blank
-A blank/empty layout.
 
-![Blank Layout](/img/layouts/blank.png)
+## 3. Get dependencies
+![Step 3](/img/wizard/step3.jpg)
 
-### Switch Layout
-
-Switch through different pages with over 60 transitions
-
-![Switch Layout](/img/layouts/switch.png)
-
-### Switch Layout (Header/Content)
-
-Switch through different pages that have a Header and Content with over 60 transitions
-
-![Switch Layout with Header and Content](/img/layouts/switch_header_content.png)
+Make sure you have a internet connection - all the dependencies getting installed.

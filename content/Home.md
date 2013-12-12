@@ -1,12 +1,10 @@
 ## Getting started
 * [[Getting Started]]
 * [[Generator wizard]]
+* [[Layouts]]
 
 ## Bikini
 * [[Bikini]]
-
-## Examples
-* [[Examples]]
 
 ## Community
 * [[Community]]

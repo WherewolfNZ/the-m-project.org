@@ -32,28 +32,22 @@
 
     a {
       font-size: 18px;
-      padding: 10px;
-      background-color: @grey-background;
-      border-radius: 4px;
-      .transition(all 0.5s 0s);
-
-      &:hover,
-      &:focus {
-        background-color: @white;
-        color: @blue-links;
-      }
-    }
-
-    &.docs {
-      margin: 0;
-      padding: 0;
-
-      a {
-        .link;
-        color: @blue-links;
-        background-color: @white;
-      }
+      .link;
     }
   }
 
+  pre {
+    border-radius: 5px;
+
+    code {
+      background: @grey-code-background;
+      border-radius: 5px;
+    }
+  }
+
+}
+
+.end-link {
+  margin-top: 3em;
+  font-size: 0.9em;
 }
