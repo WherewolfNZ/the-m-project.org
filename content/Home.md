@@ -1,15 +1,19 @@
-
-## Documentation
+## Getting started
 * [[Getting Started]]
-* [[Data]]
+* [[Generator wizard]]
+* [[Layouts]]
 
-### Advanced
-* [[Project Scaffolding]]
+## Generator wizard
+* [[Getting Started]]
+* [[Generator wizard]]
+* [[Layouts]]
 
-### Community
-* [[Contributing]]
+## Layouts
+* [[Getting Started]]
+* [[Generator wizard]]
+* [[Layouts]]
 
-## API
-* [[grunt]]
-* [[grunt.config]]
-
+## Generator
+* [[Getting Started]]
+* [[Generator wizard]]
+* [[Generator Layouts]]

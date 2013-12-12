@@ -43,17 +43,34 @@ module.exports = function (grunt) {
         var sidebars = [];
         var names = grunt.file.expand({cwd:base}, ['*', '!Blog-*', '!grunt*.md', '!*.js']);
 
-        sidebars[0] = getSidebarSection('## Documentation', 'icon-document-alt-stroke');
-        sidebars[1] = getSidebarSection('### Advanced');
-        sidebars[2] = getSidebarSection('### Community');
-        sidebars[3] = getSidebarSection('### Migration guides');
+        //These are just the title of the navigation, they will be hidden with css because they do not provide linking
+        sidebars[0] = getSidebarSection('## Getting started');
+        sidebars[1] = getSidebarSection('## Generator wizard');
+        sidebars[2] = getSidebarSection('## Layouts');
+        sidebars[3] = getSidebarSection('## Bikini');
+        sidebars[4] = getSidebarSection('## Examples');
+        sidebars[5] = getSidebarSection('## Community');
 
         names.forEach(function (name) {
+
+          if(name.indexOf('.png') > -1) {
+            grunt.file.copy(base + name, 'build/' + name);
+            return;
+          }
 
           var title = name.replace(/-/g,' ').replace('.md', ''),
             segment = name.replace(/ /g,'-').replace('.md', '').toLowerCase(),
             src = base + name,
             dest = 'build/' + name.replace('.md', '').toLowerCase() + '.html';
+
+            var sb = [];
+            sidebars.forEach(function(sidebar){
+                if(sidebar && sidebar[0] && sidebar[0].name){
+                    if(sidebar[0].name === title){
+                        sb = sidebar;
+                    }
+                }
+            });
 
           grunt.file.copy(src, dest, {
             process:function (src) {
@@ -65,7 +82,7 @@ module.exports = function (grunt) {
                     pageSegment: segment,
                     title:title,
                     content: docs.anchorFilter( marked( docs.wikiAnchors(src) ) ),
-                    sidebars: sidebars
+                    sidebar: sb
                   };
                 return jade.compile(grunt.file.read(file), {filename:file})(templateData);
               } catch (e) {
@@ -148,7 +165,6 @@ module.exports = function (grunt) {
           if (rMode && line.length > 0) {
             var item = line.replace(/#/g,'').replace(']]', '').replace('* [[', ''),
               url = item;
-
             if (item[0] === ' ') {
               // TODO: clean this up...
               if (iconClass) {

@@ -1,0 +1,53 @@
+.content {
+  padding: 2em 0;
+
+  ul > li {
+    list-style-image: @list-bullet;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+
+    a {
+      .link;
+      color: @grey-text;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    border-bottom: @grey-border;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 20px auto;
+
+    a {
+      font-size: 14px;
+      .link;
+    }
+  }
+
+  pre {
+    border-radius: 5px;
+
+    code {
+      background: @grey-code-background;
+      border-radius: 5px;
+    }
+  }
+
+}
+
+.end-link {
+  margin-top: 3em;
+  font-size: 0.9em;
+}
