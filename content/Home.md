@@ -1,14 +1,12 @@
 ## Getting started
-* [[Getting Started]]
-
-## Bikini
+* [[Getting Started sub]]
 * [[Bikini]]
 
+## Bikini
+* [[Bikini sub]]
+
 ## Examples
-* [[Examples]]
+* [[Examples sub]]
 
 ## Community
-* [[Community]]
-
-## Documentation
-* [[Documentation]]
+* [[Community sub]]

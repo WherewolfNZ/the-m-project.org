@@ -24,10 +24,19 @@ This is a paragraph
  var s = "JavaScript syntax highlighting";
  alert(s);
  ```
+ ```
+ No language indicated, so no syntax highlighting.
+ But let's throw in a <b>tag</b>.
+ ```
+
+
 
 #### Links
 __[This is a standalone link]__
+---
 [here](generator-wizard)
+---
+
 
 #### Images
 ![This is an image](/img/html5.png)

@@ -11,8 +11,7 @@ block content
         .row(class=locals.pageSegment)
             .col-xs-3
                 .sidebar-nav
-                    if locals.sidebars
-                        each sidebar in sidebars
+                    if locals.sidebar
                             ul.nav.nav-list
                                 each link in sidebar
                                     if link.url

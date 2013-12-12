@@ -48,19 +48,25 @@ module.exports = function (grunt) {
         sidebars[1] = getSidebarSection('## Bikini');
         sidebars[2] = getSidebarSection('## Examples');
         sidebars[3] = getSidebarSection('## Community');
-        sidebars[4] = getSidebarSection('## Documentation');
 
         names.forEach(function (name) {
 
           if(name.indexOf('.png') > -1) {
             grunt.file.copy(base + name, 'build/' + name);
-            return;	
+            return;
           }
 
           var title = name.replace(/-/g,' ').replace('.md', ''),
             segment = name.replace(/ /g,'-').replace('.md', '').toLowerCase(),
             src = base + name,
             dest = 'build/' + name.replace('.md', '').toLowerCase() + '.html';
+
+            var sb = [];
+            sidebars.forEach(function(sidebar){
+                if(sidebar[0].name === title){
+                    sb = sidebar;
+                }
+            });
 
           grunt.file.copy(src, dest, {
             process:function (src) {
@@ -72,7 +78,7 @@ module.exports = function (grunt) {
                     pageSegment: segment,
                     title:title,
                     content: docs.anchorFilter( marked( docs.wikiAnchors(src) ) ),
-                    sidebars: sidebars
+                    sidebar: sb
                   };
                 return jade.compile(grunt.file.read(file), {filename:file})(templateData);
               } catch (e) {
@@ -153,6 +159,7 @@ module.exports = function (grunt) {
           else if (line.substring(0,2) === '##') { rMode = false; }
 
           if (rMode && line.length > 0) {
+              grunt.log.ok('dead', line);
             var item = line.replace(/#/g,'').replace(']]', '').replace('* [[', ''),
               url = item;
             if (item[0] === ' ') {
