@@ -1,0 +1,59 @@
+.navbar-default {
+  margin-bottom: 0;
+  background-color: @white;
+  border: none;
+}
+
+.nav.navbar-nav {
+  font-size: 14px;
+  margin: 2em 1em 0 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding: 5px 15px;
+  .link;
+  color: @grey-text;
+
+  &.docu-link {
+    background-color: @static-blue;
+    color: @white;
+    border-radius: 4px;
+    .transition(all 0.5s 0s);
+
+    &:hover,
+    &:focus {
+      background-color: @white;
+      color: @grey-text;
+    }
+  }
+}
+
+.headline {
+  padding: 3em 0;
+  color: @white;
+  background: @static-blue url('/img/mproject_idbg_op5.png') repeat right top;
+
+  .headline-title {
+    margin: 5px 0 20px 0;
+  }
+
+  .headline-subtitle {
+    width: 500px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.headline-bottom {
+  padding: 1em;
+  font-size: 18px;
+  border-bottom: @grey-border;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,16 +1,24 @@
-@import "variables";
 @import "../../bower_components/bootstrap/less/bootstrap";
+@import "variables";
+@import "header";
+@import "sidebar";
+@import "content";
+@import "footer";
 @import "zenburn";
 
 body {
-  background: #fff;
+  background: @white;
+  color: @grey-text;
+}
+
+a {
+  .link;
 }
 
 code, pre {
   font-size: 13px;
   font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
-
 
 pre {
   padding: 0;

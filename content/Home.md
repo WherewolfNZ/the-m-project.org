@@ -1,16 +1,14 @@
-
-## Documentation
+## Getting started
 * [[Getting Started]]
 
-### Advanced
-* [[Project Scaffolding]]
+## Bikini
+* [[Bikini]]
 
-### Community
-* [[Contributing]]
+## Examples
+* [[Examples]]
 
-## API
-* [[grunt]]
-* [[grunt.config]]
+## Community
+* [[Community]]
 
-### Other
-* [[Inside Tasks]]
+## Documentation
+* [[Documentation]]

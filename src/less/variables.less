@@ -1,3 +1,34 @@
 @import "../../bower_components/bootstrap/less/bootstrap/variables";
 
 // Here you can override any bootstrap variables
+@white: #FFF;
+@grey-text: #636363;
+@static-blue: #2EABDA;
+@grey-border-color: #E7E7E7;
+@grey-background: #D5D5D5;
+@blue-links: #61CAE7;
+
+@font-family-sans-serif: 'Open Sans', sans-serif; //override bootstrap's
+
+@grey-border: 1px solid @grey-border-color;
+
+@list-bullet: url('/img/the-m-project_listicon.png');
+
+/* MIXINS */
+.transition(@property, @duration, @timing-function: ease-out, @delay) {
+  -webkit-transition: @property @duration @timing-function @delay;
+  -moz-transition: @property @duration @timing-function @delay;
+  -o-transition: @property @duration @timing-function @delay;
+  transition: @property @duration @timing-function @delay;
+}
+
+.link {
+  color: @blue-links;
+  .transition(color 0.5s 0s);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: darken(@blue-links, 20%);
+  }
+}

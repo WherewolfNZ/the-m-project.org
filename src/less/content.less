@@ -1,0 +1,59 @@
+.content {
+  padding: 2em 0;
+
+  ul > li {
+    list-style-image: @list-bullet;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+
+    a {
+      .link;
+      color: @grey-text;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    border-bottom: @grey-border;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 20px auto;
+
+    a {
+      font-size: 18px;
+      padding: 10px;
+      background-color: @grey-background;
+      border-radius: 4px;
+      .transition(all 0.5s 0s);
+
+      &:hover,
+      &:focus {
+        background-color: @white;
+        color: @blue-links;
+      }
+    }
+
+    &.docs {
+      margin: 0;
+      padding: 0;
+
+      a {
+        .link;
+        color: @blue-links;
+        background-color: @white;
+      }
+    }
+  }
+
+}

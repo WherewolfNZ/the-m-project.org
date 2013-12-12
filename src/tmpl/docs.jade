@@ -1,27 +1,34 @@
 extends layout
 block content
-  .row(class=locals.pageSegment)
-    .col-xs-3
-      .well.sidebar-nav
-        if locals.sidebars
-          each sidebar in sidebars
-            ul.nav.nav-list
-              each link in sidebar
-                if link.url
-                  if locals.rootSidebar
-                    li
-                      a(href='/' + link.url + '.html', class=locals.pageSegment == link.url && 'active')= link.name
-                  else
-                    li
-                      a(href='/' + page + '/' + link.url + '.html', class=locals.pageSegment == link.url && 'active')= link.name
-                else
-                  li.nav-header
-                    if link.icon
-                      i(class=link.icon)
-                    span= link.name
-    .col-xs-9
-      h1= title
-      != content
-      .end-link
-        | Found an error in the documentation?
-        | <a href='https://github.com/gruntjs/grunt-docs/issues'>File an issue</a>.
+    .headline
+        .container
+            h1.headline-title= title
+    aside.headline-bottom
+        .container
+            p.docs| Get started with The-M-Project:&nbsp;
+                a(href='http://www.the-m-project.org/docs/absinthe/') Read The-M-Project docs &rarr;
+    .container
+        .row(class=locals.pageSegment)
+            .col-xs-3
+                .sidebar-nav
+                    if locals.sidebars
+                        each sidebar in sidebars
+                            ul.nav.nav-list
+                                each link in sidebar
+                                    if link.url
+                                        if locals.rootSidebar
+                                            li
+                                                a(href='/' + link.url + '.html', class=locals.pageSegment == link.url && 'active')= link.name
+                                        else
+                                            li
+                                                a(href='/' + page + '/' + link.url + '.html', class=locals.pageSegment == link.url && 'active')= link.name
+                                    else
+                                        li.nav-header
+                                            if link.icon
+                                                i(class=link.icon)
+                                            span= link.name
+            .col-xs-9
+                != content
+                .end-link
+                    | Found an error in the documentation?
+                    | <a href='https://github.com/gruntjs/grunt-docs/issues'>File an issue</a>.
