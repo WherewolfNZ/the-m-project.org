@@ -1,19 +1,29 @@
 ## Getting started
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Layouts]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Generator wizard
+## Whats inside
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Layouts]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Layouts
+## The generator
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Layouts]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Generator
+## Roadmap
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Generator Layouts]]
+* [[The generator]]
+* [[Roadmap]]
+
+## Overview
+* [[Overview]]
+* [[Getting Started]]
+* [[The generator]]
+* [[Roadmap]]
