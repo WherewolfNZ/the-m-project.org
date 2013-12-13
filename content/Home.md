@@ -1,20 +1,29 @@
 ## Getting started
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Layouts]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Generator wizard
+## Whats inside
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Layouts]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Layouts
+## The generator
+* [[Overview]]
 * [[Getting Started]]
-* [[Generator wizard]]
-* [[Layouts]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Bikini
-* [[Bikini]]
+## Roadmap
+* [[Overview]]
+* [[Getting Started]]
+* [[The generator]]
+* [[Roadmap]]
 
-## Community
-* [[Community]]
+## Overview
+* [[Overview]]
+* [[Getting Started]]
+* [[The generator]]
+* [[Roadmap]]

@@ -44,12 +44,10 @@ module.exports = function (grunt) {
         var names = grunt.file.expand({cwd:base}, ['*', '!Blog-*', '!grunt*.md', '!*.js']);
 
         //These are just the title of the navigation, they will be hidden with css because they do not provide linking
-        sidebars[0] = getSidebarSection('## Getting started');
-        sidebars[1] = getSidebarSection('## Generator wizard');
-        sidebars[2] = getSidebarSection('## Layouts');
-        sidebars[3] = getSidebarSection('## Bikini');
-        sidebars[4] = getSidebarSection('## Examples');
-        sidebars[5] = getSidebarSection('## Community');
+        sidebars[0] = getSidebarSection('## Overview');
+        sidebars[1] = getSidebarSection('## Getting started');
+        sidebars[2] = getSidebarSection('## The generator');
+        sidebars[3] = getSidebarSection('## Roadmap');
 
         names.forEach(function (name) {
 
