@@ -48,6 +48,8 @@ module.exports = function (grunt) {
         sidebars[1] = getSidebarSection('## Getting started');
         sidebars[2] = getSidebarSection('## The generator');
         sidebars[3] = getSidebarSection('## Roadmap');
+        sidebars[4] = getSidebarSection('## Addressbook');
+        sidebars[5] = getSidebarSection('## Kitchensink');
 
         names.forEach(function (name) {
 
