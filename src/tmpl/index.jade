@@ -1,10 +1,20 @@
-extends layout
+extends layout_index
 
 block content
-  .container
-    .row-fluid
-      .span9.page
-        .get-started
-          h2 The M Project
-          p The pages in the menu are available to edit via markdown.
-          p The content for this index is yet to be added.
+    .container
+        .row
+            a(href='#')
+                img.mproject-icon(src='/img/the-m-project_id_icon_1c.png')
+            h1.main-title Create cross-platform mobile web apps that look stunningly native
+            p.main-subtitle The-M-Project is a mobile HTML5 JavaScript framework that helps you build great mobile apps, easy and fast.
+            .group-links
+                p
+                    a(href='https://twitter.com/_themproject')
+                        img(src='/img/twitterbird.png')
+                        span @_themproject
+                p
+                    a(href='https://groups.google.com/forum/#!forum/themproject')
+                        img(src='/img/googlegroups.png')
+                        span Google groups
+        include blocks/footer_index
+

@@ -80,7 +80,7 @@ module.exports = function(grunt) {
       // if we add more js, modify this properly
       vendor: {
         src: [
-          'bower_components/modernizr/modernizr.js'
+          'bower_components/jquery/jquery.min.js'
         ],
         dest: 'build/js/vendor.js'
       },

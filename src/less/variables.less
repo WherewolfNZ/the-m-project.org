@@ -8,8 +8,11 @@
 @grey-background: #D5D5D5;
 @grey-code-background: #3E3E3E;
 @blue-links: #61CAE7;
+@index-gradient-color-top: #63CBE9;
+@index-gradient-color-bottom: #0E7BBF;
 
-@font-family-sans-serif: 'Open Sans', sans-serif; //override bootstrap's
+@font-family-sans-serif: 'Open Sans', sans-serif;
+//override bootstrap's
 
 @grey-border: 1px solid @grey-border-color;
 
@@ -21,6 +24,17 @@
   -moz-transition: @property @duration @timing-function @delay;
   -o-transition: @property @duration @timing-function @delay;
   transition: @property @duration @timing-function @delay;
+}
+
+.gradient-with-image(@startColor: @index-gradient-color-top, @endColor: @index-gradient-color-bottom, @background-image: url('/img/mproject_idbg_op5.png')) {
+  background: @startColor;
+  background-image: @background-image;
+  background-image: @background-image, -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background-image: @background-image, -webkit-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, -moz-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, -ms-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, -o-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, linear-gradient(top, @startColor, @endColor);
 }
 
 .link {

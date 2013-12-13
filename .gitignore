@@ -1,6 +1,9 @@
 node_modules
-build
-tmp
-bower_components
-.idea
+dist
+test/temp
+.sass-cache
+app/bower_components
+.tmp
+test/bower_components/
+.idea/
 .DS_Store

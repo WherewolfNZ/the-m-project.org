@@ -14,6 +14,10 @@
     }
   }
 
+  h1, h2, h3, h4 {
+    margin-top: 1.5em;
+  }
+
   h3 {
     font-size: 24px;
   }
@@ -31,8 +35,12 @@
     margin: 20px auto;
 
     a {
-      font-size: 18px;
       .link;
+    }
+
+    &.docs {
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -48,6 +56,57 @@
 }
 
 .end-link {
-  margin-top: 3em;
-  font-size: 0.9em;
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 14px;
+  background-color: @grey-background;
+  border-radius: 5px;
+
+  a {
+    color: @static-blue;
+  }
+}
+
+.index-content {
+
+  a {
+    color: @white;
+  }
+
+  .gradient-with-image;
+  min-height: 100%;
+  color: @white;
+  padding: 6em 0;
+
+  .mproject-icon {
+    .img-responsive;
+    display: inline-block;
+  }
+
+  .main-title {
+    max-width: 20em;
+  }
+
+  .main-subtitle {
+    max-width: 30em;
+    margin: 2em 0;
+  }
+
+  .group-links {
+
+    img {
+      display: inline;
+      margin-right: 7px;
+    }
+
+    p {
+      display: inline-block;
+      padding: 0;
+      margin: 1em 20px 1em 0;
+    }
+  }
+
+  .link-table a {
+    color: @white;
+  }
 }
