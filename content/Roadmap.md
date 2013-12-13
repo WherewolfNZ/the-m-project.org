@@ -1,30 +1,30 @@
 
 
-### Absinthe release
-- The-M-Project v.2.0 beta 1 (We are here)
-	- All the fancy stuff we mentioned above
+# Absinthe release
 
-- The-M-Project v.2.0 beta 2
-	- MenuView
-	- SideMenu
-	- Themes for Android and iOS
-	- MenuLayout
-    - touchable ToggleSwitch
-- The-M-Project v.2.0 RC1
-	- Scaffold for MenuLayout
-	- Feedback from the Community
-	- Complete documentation
-	- Tutorials
-	- More Samples
-	- test coverage >90% https://coveralls.io/r/mwaylabs/generator-m?branch=
+## The-M-Project v.2.0 beta 2
 
-- The-M-Project v.2.0
-	- Final release
+- MenuView
+- SideMenu
+- Themes for Android and iOS
+- MenuLayout
+- Touchable ToggleSwitch
 
-### Future plans
+## The-M-Project v.2.0 RC1
 
-- The-M-Project 2.1
-	- Full support for Windows
-	- Enterprise Edition
-	- Extending Bikini
-	- A lot more to come
+- Scaffold for MenuLayout
+- Feedback from the Community
+- Complete documentation
+- Tutorials
+- More Samples
+- Test coverage >90%
+
+## The-M-Project v.2.0
+
+- Final release (Q1 2014)
+
+# Future plans v2.x
+- Full support for Windows
+- Enterprise Edition
+- Extending Bikini
+- A lot more to come
