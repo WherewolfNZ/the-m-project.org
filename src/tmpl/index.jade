@@ -1,19 +1,29 @@
 extends layout_index
 
 block content
-    .container
-        .row
-            a(href='#')
-                img.mproject-icon(src='/img/m-project-icon.png')
-            h1.main-title Create cross-platform mobile web apps that look stunningly native
-            p.main-subtitle The-M-Project is a mobile HTML5 JavaScript framework that helps you build great mobile apps, easy and fast.
-            .group-links
-                p
-                    a(href='https://twitter.com/_themproject')
-                        img(src='/img/twitterbird.png')
-                        span @_themproject
-                p
-                    a(href='https://groups.google.com/forum/#!forum/themproject')
-                        img(src='/img/googlegroups.png')
-                        span Google groups
-        include blocks/footer_index
+  .container
+    .row
+      a(href='#')
+        img.mproject-icon(src='/img/m-project-icon.png')
+      h1.main-title Create cross-platform mobile web apps that look stunningly native
+      h4.main-subtitle The-M-Project is a mobile HTML5 JavaScript framework that helps you build great mobile apps, easy and fast.
+      .button-group
+        h4.link-button
+          a(href='#') Getting started!
+        h4.link-button
+          a(href='#') Try The-M-Project
+      .group-links
+        p
+          a(href='https://twitter.com/_themproject')
+            img(src='/img/twitterbird.png')
+            span @_themproject
+        p
+          a(href='https://groups.google.com/forum/#!forum/themproject')
+            img(src='/img/googlegroups.png')
+            span Google groups
+      .version-button
+        h5
+          b
+            a(href='#') Version 2.0 Absinthe
+          span  | Latest update on Github 12.12.2013
+    include blocks/footer_index

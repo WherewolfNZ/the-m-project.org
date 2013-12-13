@@ -2,6 +2,8 @@
 
 // Here you can override any bootstrap variables
 @white: #FFF;
+@white-25: rgba(255, 255, 255, 0.25);
+@orange: #ECB13B;
 @grey-text: #636363;
 @static-blue: #2EABDA;
 @grey-border-color: #E7E7E7;
@@ -26,7 +28,7 @@
   transition: @property @duration @timing-function @delay;
 }
 
-.gradient-with-image(@startColor: @index-gradient-color-top, @endColor: @index-gradient-color-bottom, @background-image: url('/img/mproject_idbg_op5.png')) {
+.gradient-with-image(@startColor: @index-gradient-color-top, @endColor: @index-gradient-color-bottom, @background-image: url('/img/honeycomb.png')) {
   background: @startColor;
   background-image: @background-image;
   background-image: @background-image, -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));

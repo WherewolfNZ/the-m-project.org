@@ -90,6 +90,28 @@
   .main-subtitle {
     max-width: 30em;
     margin: 2em 0;
+    line-height: 24px;
+  }
+
+  .button-group {
+    margin-bottom: 2em;
+
+    .link-button {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    a {
+      padding: 1em 4em;
+      background: @orange;
+      border-radius: 4px;
+      .transition(background 0.5s 0s);
+
+      &:hover,
+      &:focus {
+        background: @white;
+      }
+    }
   }
 
   .group-links {
@@ -106,7 +128,22 @@
     }
   }
 
-  .link-table a {
+  .version-button {
+    margin-top: 4em;
+    padding: 1em;
+    border-radius: 4px;
+    color: @static-blue;
+    background: @white;
     color: @white;
+    background: @white-25;
+
+  }
+
+  footer {
+    border-top: 0;
+
+    .link-table a {
+      color: @white;
+    }
   }
 }
