@@ -1,37 +1,54 @@
-.navbar-default {
-  margin-bottom: 0;
+.navbar-static-top {
+  margin: 0.5em 0;
   background-color: @white;
   border: none;
 }
 
 .nav.navbar-nav {
   font-size: 14px;
-  margin: 2em 1em 0 0;
-}
+  margin-top: 12px;
 
-.navbar-default .navbar-nav > li > a {
-  padding: 5px 15px;
-  .link;
-  color: @grey-text;
-
-  &.docu-link {
-    background-color: @static-blue;
-    color: @white;
-    border-radius: 4px;
-    .transition(all 0.5s 0s);
+  & > li > a {
+    padding: 5px 15px;
+    .link;
+    color: @grey-text;
 
     &:hover,
     &:focus {
-      background-color: @white;
-      color: @grey-text;
+      background: none;
     }
+
+    &.docu-link {
+      background-color: @static-blue;
+      color: @white;
+      border-radius: 4px;
+      .transition(all 0.5s 0s);
+
+      &:hover,
+      &:focus {
+        background-color: @white;
+        color: @grey-text;
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  border: 2px solid @static-blue;
+  border-radius: 4px;
+  margin-top: 1em;
+
+  .icon-bar {
+    background: @static-blue;
+    width: 30px;
+    height: 3px;
   }
 }
 
 .headline {
   padding: 3em 0;
   color: @white;
-  background: @static-blue url('/img/honycomb.png') repeat right top;
+  background: @static-blue url('/img/honeycomb.png') repeat right top;
 
   .headline-title {
     margin: 5px 0 20px 0;
@@ -55,5 +72,25 @@
   p {
     padding: 0;
     margin: 0;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .navbar-header {
+    float: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .nav.navbar-nav {
+    .text-center;
+    font-size: 16px;
+
+    li {
+      padding: 5px 0;
+    }
   }
 }

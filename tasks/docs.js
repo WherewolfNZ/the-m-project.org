@@ -45,11 +45,14 @@ module.exports = function (grunt) {
 
         //These are just the title of the navigation, they will be hidden with css because they do not provide linking
         sidebars[0] = getSidebarSection('## Overview');
-        sidebars[1] = getSidebarSection('## Getting started');
-        sidebars[2] = getSidebarSection('## The generator');
-        sidebars[3] = getSidebarSection('## Roadmap');
-        sidebars[4] = getSidebarSection('## Addressbook');
-        sidebars[5] = getSidebarSection('## Kitchensink');
+        sidebars[1] = getSidebarSection('## Bikini');
+        sidebars[2] = getSidebarSection('## Examples');
+        sidebars[3] = getSidebarSection('## Community');
+        sidebars[4] = getSidebarSection('## Getting started');
+        sidebars[5] = getSidebarSection('## The generator');
+        sidebars[6] = getSidebarSection('## Roadmap');
+        sidebars[7] = getSidebarSection('## Addressbook');
+        sidebars[8] = getSidebarSection('## Kitchensink');
 
         names.forEach(function (name) {
 

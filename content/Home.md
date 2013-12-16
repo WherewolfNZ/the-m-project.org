@@ -4,6 +4,12 @@
 * [[The generator]]
 * [[Roadmap]]
 
+## Bikini
+* [[Bikini]]
+
+## Community
+* [[Community]]
+
 ## Whats inside
 * [[Overview]]
 * [[Getting Started]]

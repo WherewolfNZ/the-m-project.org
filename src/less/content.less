@@ -1,5 +1,4 @@
 .content {
-  padding: 2em 0;
 
   ul > li {
     list-style-image: @list-bullet;
@@ -89,7 +88,7 @@
 
   .main-subtitle {
     max-width: 30em;
-    margin: 2em 0;
+    margin: 1em 0 2em 0;
     line-height: 24px;
   }
 
@@ -126,11 +125,18 @@
       padding: 0;
       margin: 1em 20px 1em 0;
     }
+
+    .github-btn {
+      width: 88px;
+      height: 25px;
+      border: none;
+      margin: 1em 12px -12px 0;
+    }
   }
 
   .version-button {
     margin-top: 4em;
-    padding: 1em;
+    padding: 1em 2em;
     border-radius: 4px;
     color: @static-blue;
     background: @white;
@@ -141,9 +147,93 @@
 
   footer {
     border-top: 0;
+    margin-left: -1em;
+
+    img {
+      margin: 0;
+    }
 
     .link-table a {
       color: @white;
     }
   }
+}
+
+@media (max-width: 992px) {
+
+  .index-content {
+
+    .mproject-icon {
+      .img-responsive;
+    }
+
+    .main-title,
+    .main-subtitle,
+    .group-links,
+    .version-button {
+      .text-center;
+      max-width: 100%;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+
+  .index-content {
+
+    .button-group {
+
+      .link-button {
+        display: block;
+        margin: 3em auto;
+        .text-center;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h4, h5 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .index-content {
+
+    b, span {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .group-links {
+      .text-center;
+
+      p, .github-btn {
+        display: block;
+        margin: 1em auto;
+      }
+    }
+
+    .button-group {
+
+      a {
+        padding: 1em;
+      }
+    }
+
+  }
+
+  .content {
+
+    .headline-title {
+      .text-center;
+    }
+  }
+
 }

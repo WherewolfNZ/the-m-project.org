@@ -9,7 +9,7 @@ block content
         a(href='http://www.the-m-project.org/docs/absinthe/') Read The-M-Project docs &rarr;
   .container
     .row(class=locals.pageSegment)
-      .col-xs-3
+      .col-md-3
         .sidebar-nav
           if locals.sidebar
             ul.nav.nav-list
@@ -26,7 +26,7 @@ block content
                     if link.icon
                       i(class=link.icon)
                     span= link.name
-      .col-xs-9
+      .col-md-9
         != content
         .end-link
           | Found an error in the documentation?

@@ -1,4 +1,5 @@
 footer {
+  margin-top: 4em;
   border-top: @grey-border;
   padding: 4em 0;
 }
@@ -12,6 +13,10 @@ footer {
 
 .footer-logo {
   margin-top: 4px;
+
+  img {
+    margin: 0;
+  }
 }
 
 .link-table {
@@ -29,5 +34,23 @@ footer {
   li a {
     font-size: 12px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  footer {
+    .text-center;
+    margin-top: 2em;
+
+    .footer-logo img {
+      margin: 2em auto;
+    }
+
+    .link-table a,
+    .link-table strong a {
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 }
