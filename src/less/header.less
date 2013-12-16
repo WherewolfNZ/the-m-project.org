@@ -37,11 +37,33 @@
   border: 2px solid @static-blue;
   border-radius: 4px;
   margin-top: 1em;
+  padding: 5px 5px;
+  z-index: 10;
 
   .icon-bar {
     background: @static-blue;
-    width: 30px;
-    height: 3px;
+    width: 24px;
+    height: 2px;
+  }
+}
+
+.tmp-logo {
+  position: relative;
+
+  .beta-badge {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -6em;
+    margin-left: 1em;
+    background: @static-blue;
+    margin: 0.5em 0;
+    padding: 0.4em 1.2em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: @white;
+    font-weight: bold;
+    border-radius: 0.5em;
   }
 }
 
@@ -87,6 +109,12 @@
     margin-bottom: 1em !important;
   }
 
+  .tmp-logo {
+
+    .beta-badge {
+      right: 18em;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -109,6 +137,22 @@
 
     .headline-subtitle {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+
+  .tmp-logo {
+
+    .beta-badge {
+      position: relative;
+      width: 5em;
+      display: block;
+      top: 0;
+      left: 20em;
+      margin: 0 9em 0 0;
+      font-size: 8px;
     }
   }
 }

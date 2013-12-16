@@ -42,27 +42,20 @@
       padding: 0;
     }
   }
-
-  pre {
-    border-radius: 5px;
-
-    code {
-      background: @grey-code-background;
-      border-radius: 5px;
-    }
-  }
-
 }
 
 .end-link {
   margin-top: 2em;
   padding: 1em;
   font-size: 14px;
-  background-color: @grey-background;
+  background-color: #d9edf7;;
+  border: 1px solid #bce8f1;
   border-radius: 5px;
+  color: #31708f;
 
   a {
-    color: @static-blue;
+    color: darken(@blue-links, 20%);
+    text-decoration: underline;
   }
 }
 
@@ -98,6 +91,11 @@
     .link-button {
       display: inline-block;
       margin-right: 1em;
+
+      a {
+        display: inline-block;
+        min-width: 21em;
+      }
     }
 
     a {
@@ -175,6 +173,10 @@
       max-width: 100%;
     }
 
+    .button-group {
+      .text-center;
+    }
+
   }
 }
 
@@ -186,7 +188,7 @@
 
       .link-button {
         display: block;
-        margin: 3em auto;
+        margin: 1em auto;
         .text-center;
       }
     }
@@ -205,9 +207,10 @@
   }
 
   .index-content {
+    padding: 2em 0;
 
     b, span {
-      display: block;
+      display: inline;
       margin: 0 auto;
     }
 
@@ -222,8 +225,19 @@
 
     .button-group {
 
-      a {
-        padding: 1em;
+      .link-button {
+        a {
+          padding: 1em;
+          min-width: 15em;
+        }
+      }
+    }
+
+    .version-button {
+
+      strong,
+      span {
+        display: block;
       }
     }
 

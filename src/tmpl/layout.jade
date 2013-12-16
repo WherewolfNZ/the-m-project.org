@@ -1,16 +1,17 @@
 !!! 5
 html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-        title= (locals.title ? locals.title + ' - ' : '') + 'The-M-Project :: Absinthe'
-        link(rel='stylesheet', href='/css/main.css')
-        link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans', type='text/css')
-        link(rel='shortcut icon', href='../img/Favicon.png', type='image/x-icon')
-    body(class=locals.page ? 'page-' + locals.page + (locals.page === 'index' ? '' : ' page-secondary') : '')
-        include blocks/header
-        .content
-            block content
-        include blocks/footer
-        script(src='/js/vendor.js')
-        script(src='/js/page.js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title= (locals.title ? locals.title + ' - ' : '') + 'The-M-Project :: Absinthe'
+    link(rel='stylesheet', href='/css/main.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans', type='text/css')
+    link(rel='shortcut icon', href='../img/Favicon.png', type='image/x-icon')
+  body(class=locals.page ? 'page-' + locals.page + (locals.page === 'index' ? '' : ' page-secondary') : '')
+    include blocks/header
+    .content
+      block content
+    include blocks/footer
+    script(src='/js/vendor.js')
+    script(src='/js/page.js')
