@@ -6,7 +6,7 @@
 
 .nav.navbar-nav {
   font-size: 14px;
-  margin-top: 12px;
+  margin-top: 16px;
 
   & > li > a {
     padding: 5px 15px;
@@ -55,7 +55,8 @@
   }
 
   .headline-subtitle {
-    width: 500px;
+    border: 0;
+    width: 30em;
   }
 
   h2 {
@@ -81,6 +82,11 @@
     float: none;
   }
 
+  nav.collapse {
+    margin-right: 6em !important;
+    margin-bottom: 1em !important;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -91,6 +97,18 @@
 
     li {
       padding: 5px 0;
+    }
+  }
+
+  .headline {
+
+    .headline-title {
+      .text-center;
+      font-size: 30px;
+    }
+
+    .headline-subtitle {
+      display: none;
     }
   }
 }

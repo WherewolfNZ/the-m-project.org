@@ -39,6 +39,52 @@ module.exports = function (grunt) {
       function generateGuides() {
         grunt.log.ok('Generating Guides...');
 
+        var headlines = {
+          getting_started: { //same for overview, the generator and roadmap
+            headline_title: 'Getting started with The-M-Project',
+            headline_subtitle: 'How to install and use The-M-Project, basic tutorials and templates for building a native app.',
+            headline_bottom: 'Get started with The-M-Project:',
+            headline_bottom_link: {
+              text: 'Read The-M-Project docs',
+              link: 'http://www.the-m-project.org/docs/absinthe/'
+            }
+          },
+
+          bikini: {
+            headline_title: 'Bikini',
+            headline_subtitle: 'An implementation of a model/server connectivity to write real-time, collaborative apps.',
+            headline_bottom: '',
+            headline_bottom_link: {
+              text: '',
+              link: ''
+            }
+          },
+
+          kitchensink: {
+            headline_title: 'Examples',
+            headline_subtitle: 'The-M-Project lets you quickly prototype and create apps through a library of components with a high device coverage.',
+            headline_bottom: '',
+            headline_bottom_link: {
+              text: '',
+              link: ''
+            }
+          },
+
+          community: {
+            headline_title: 'Community',
+            headline_subtitle: 'Join us on GitHub or Google Groups, track bugs, discuss new features or even send pull requests.',
+            headline_bottom: '',
+            headline_bottom_link: {
+              text: '',
+              link: ''
+            }
+          }
+
+        };
+
+        //same for overview, the generator and roadmap
+        headlines.overview = headlines.the_generator = headlines.roadmap = headlines.getting_started;
+
         // API Docs
         var sidebars = [];
         var names = grunt.file.expand({cwd:base}, ['*', '!Blog-*', '!grunt*.md', '!*.js']);
@@ -62,7 +108,7 @@ module.exports = function (grunt) {
           }
 
           var title = name.replace(/-/g,' ').replace('.md', ''),
-            segment = name.replace(/ /g,'-').replace('.md', '').toLowerCase(),
+            segment = name.replace(/-/g,'_').replace('.md', '').toLowerCase(),
             src = base + name,
             dest = 'build/' + name.replace('.md', '').toLowerCase() + '.html';
 
@@ -72,7 +118,7 @@ module.exports = function (grunt) {
                     if(sidebar[0].name === title){
                         sb = sidebar;
                     }
-                }
+                  }
             });
 
           grunt.file.copy(src, dest, {
@@ -83,7 +129,10 @@ module.exports = function (grunt) {
                     page:'docs',
                     rootSidebar: true,
                     pageSegment: segment,
-                    title:title,
+                    headline_title: headlines && headlines[segment] && headlines[segment].headline_title? headlines[segment].headline_title : '',
+                    headline_subtitle: headlines && headlines[segment] && headlines[segment].headline_subtitle? headlines[segment].headline_subtitle : '',
+                    headline_bottom: headlines && headlines[segment] && headlines[segment].headline_bottom? headlines[segment].headline_bottom : '',
+                    headline_bottom_link: headlines && headlines[segment] && headlines[segment].headline_bottom_link? headlines[segment].headline_bottom_link : '',
                     content: docs.anchorFilter( marked( docs.wikiAnchors(src) ) ),
                     sidebar: sb
                   };

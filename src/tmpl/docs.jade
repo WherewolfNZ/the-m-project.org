@@ -2,11 +2,14 @@ extends layout
 block content
   .headline
     .container
-      h1.headline-title= title
+      h1.headline-title= headline_title
+      h4.headline-subtitle= headline_subtitle
   aside.headline-bottom
     .container
-      p.docs| Get started with The-M-Project:&nbsp;
-        a(href='http://www.the-m-project.org/docs/absinthe/') Read The-M-Project docs &rarr;
+      p.docs= headline_bottom
+        | &nbsp;
+        if(headline_bottom_link)
+          a(href= headline_bottom_link.link ? headline_bottom_link.link : '')= headline_bottom_link.text ? headline_bottom_link.text : ''
   .container
     .row(class=locals.pageSegment)
       .col-md-3
