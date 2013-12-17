@@ -17,7 +17,7 @@
     margin-top: 2em;
 
     &:first-child {
-      margin-top: 1em;
+      margin-top: 0.5em;
     }
   }
 
@@ -36,6 +36,7 @@
 
   h4 {
     font-size: 18px;
+    line-height: 24px;
   }
 
   p {
@@ -67,15 +68,15 @@
 
 .end-link {
   position: relative;
-  margin: 3em 0 0 2em;
+  margin: 3em 0 0 1em;
   font-size: 14px;
 
   &:before {
     content: " ";
     position: absolute;
-    top: 2px;
-    left: -1.5em;
-    width: 15px;
+    top: 3px;
+    left: -14px;
+    width: 4px;
     height: 15px;
     background-color: @static-blue;
   }
@@ -88,6 +89,10 @@
 
 .index-content {
 
+  .container {
+    padding-left: 15px;
+  }
+
   a {
     color: @white;
   }
@@ -95,7 +100,7 @@
   .gradient-with-image;
   min-height: 100%;
   color: @white;
-  padding: 6em 0;
+  padding-top: 6em;
 
   .mproject-icon {
     .img-responsive;

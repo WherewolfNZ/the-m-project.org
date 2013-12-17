@@ -42,10 +42,26 @@ footer {
 .index-content {
 
   footer {
-    margin-top: 0;
+    border-top: 0;
+    margin: 1em 0 0 -1em;
+    padding: 3em 0 0 0;
+
+    .link-table {
+
+      p {
+        display: inline;
+        margin-right: 3em;
+
+        a {
+          .link;
+          color: @white;
+          font-size: 15px;
+        }
+      }
+    }
 
     .bottom-text {
-      margin-top: 4em;
+      margin-top: 3em;
     }
   }
 }
@@ -71,27 +87,6 @@ footer {
     }
   }
 
-  .index-content {
-
-    footer {
-      border-top: 0;
-      margin-left: -1em;
-
-      .link-table {
-
-        p {
-          display: inline;
-          margin-right: 3em;
-
-          a {
-            .link;
-            color: @white;
-            font-size: 15px;
-          }
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 768px) {

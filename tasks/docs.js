@@ -84,6 +84,7 @@ module.exports = function (grunt) {
 
         //same for overview, the generator and roadmap
         headlines.overview = headlines.the_generator = headlines.roadmap = headlines.getting_started;
+        headlines.addressbook = headlines.kitchensink;
 
         // API Docs
         var sidebars = [];

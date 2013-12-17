@@ -4,9 +4,9 @@
   border: none;
 }
 
-.container > .navbar-header {
-  margin-left: -15px;
-}
+//.container > .navbar-header {
+//  margin-left: -15px;
+//}
 
 .nav.navbar-nav {
   font-size: 14px;
@@ -20,12 +20,6 @@
     &:hover,
     &:focus {
       background: none;
-    }
-
-    &:active {
-      color: @white;
-      background-color: @static-blue;
-      border-radius: 4px;
     }
 
     &.docu-link {
@@ -44,9 +38,10 @@
 }
 
 .sidebar-nav {
+  margin-left: -15px;
 
   a.active-link {
-    padding-left: 0.5em;
+    padding-left: 1em;
     color: @static-blue;
 
     &:before {
@@ -109,6 +104,7 @@
   .headline-subtitle {
     border: 0;
     width: 30em;
+    margin-top: 1em;
   }
 
   h2 {
@@ -137,6 +133,10 @@
   nav.collapse {
     margin-right: 6em !important;
     margin-bottom: 1em !important;
+  }
+
+  .sidebar-nav {
+    margin-left: 0;
   }
 
   .tmp-logo {
