@@ -4,7 +4,7 @@ All data handling with models and collections are based on [backbone.js](http://
 ## M.Model
 Extends Backbone.Model for the use of an entity and store.
 
-### Extend 
+### Extend
 **M.Model.extend(properties, [classProperties]) **
 
 A Simple example to use a specify your own id and validation (in plain Backbone syntax):

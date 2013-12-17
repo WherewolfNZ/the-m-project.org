@@ -53,30 +53,30 @@ module.exports = function (grunt) {
           bikini: {
             headline_title: 'Bikini',
             headline_subtitle: 'An implementation of a model/server connectivity to write real-time, collaborative apps.',
-            headline_bottom: '',
+            headline_bottom: 'Everything a model needs:',
             headline_bottom_link: {
-              text: '',
-              link: ''
+              text: 'Get a glimpse of Bikini',
+              link: 'https://github.com/mwaylabs/The-M-Project#bikini'
             }
           },
 
           kitchensink: {
             headline_title: 'Examples',
             headline_subtitle: 'The-M-Project lets you quickly prototype and create apps through a library of components with a high device coverage.',
-            headline_bottom: '',
+            headline_bottom: 'Start developing apps:',
             headline_bottom_link: {
-              text: '',
-              link: ''
+              text: 'Read the Readme at GitHub',
+              link: 'https://github.com/mwaylabs/The-M-Project#the-m-project-20-absinthe-beta-release--'
             }
           },
 
           community: {
             headline_title: 'Community',
             headline_subtitle: 'Join us on GitHub or Google Groups, track bugs, discuss new features or even send pull requests.',
-            headline_bottom: '',
+            headline_bottom: 'Be a part of the discussion:',
             headline_bottom_link: {
-              text: '',
-              link: ''
+              text: 'Start at Google Groups',
+              link: 'https://groups.google.com/forum/#!forum/themproject'
             }
           }
 

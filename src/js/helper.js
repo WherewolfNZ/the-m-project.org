@@ -22,4 +22,8 @@ $(function() {
     });
   });
 
+  //add active class to links
+  var currentPage = (window.location.href).split("/").pop();
+  $('a:not([href="/' + currentPage + '"])').removeClass('active-link');
+  $('a[href="/' + currentPage + '"]').addClass('active-link');
 });

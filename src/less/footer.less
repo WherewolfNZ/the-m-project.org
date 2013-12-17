@@ -74,7 +74,43 @@ footer {
   .index-content {
 
     footer {
-      margin: 0;
+      border-top: 0;
+      margin-left: -1em;
+
+      .link-table {
+
+        p {
+          display: inline;
+          margin-right: 3em;
+
+          a {
+            .link;
+            color: @white;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .index-content {
+
+    footer {
+
+      .link-table {
+
+        p {
+          display: block;
+          margin-right: 0;
+        }
+      }
+
+      .bottom-text {
+        margin-top: 1em;
+      }
     }
   }
 }
