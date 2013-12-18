@@ -94,7 +94,7 @@ module.exports = function( grunt ) {
 
         // API Docs
         var sidebars = [];
-        var names = grunt.file.expand({cwd: base}, ['*', '!Blog-*', '!grunt*.md', '!*.js']);
+        var names = grunt.file.expand({cwd: base, filter: 'isFile'}, ['*', '!Blog-*', '!grunt*.md', '!*.js']);
 
         //These are just the title of the navigation, they will be hidden with css because they do not provide linking
         sidebars[0] = getSidebarSection('## Overview');
