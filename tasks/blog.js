@@ -36,8 +36,8 @@ module.exports = function (grunt) {
     var names;
     var shortList = [];
     var articleList = [];
-    var base = (grunt.config.get('local') === true) ? 'content/' : 'tmp/';
-    var files = grunt.file.expand({cwd:base}, ['Blog-*.md']);
+    var base = 'content/blog/';
+    var files = grunt.file.expand({cwd:base, filter: 'isFile'}, ['*.md']);
 
     names = files.map(function (name) {
       return name.substring(5, name.length - 3);
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
       var name = names[i],
         postTitle = name.substring(10, name.length).replace(/-/g, ' '),
         postDate = name.substring(0, 10),
-        destName = name.toLowerCase();
+        destName = name.toLowerCase() + '.html';
 
       articleList.push({
         url:destName,
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
       content:shortList,
       articleList:articleList
     });
-    grunt.file.write('build/blog.html', blogOut);
+    grunt.file.write('build/blog/index.html', blogOut);
 
     /**
      * Generate imprint

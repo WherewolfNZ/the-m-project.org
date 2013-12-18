@@ -118,6 +118,11 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'src/', src: ['img/**'], dest: 'build/'}
         ]
       },
+      content: {
+        files: [
+          {expand: true, cwd: 'content/', src: ['**/*.jpg'], dest: 'build/'}
+        ]
+      },
       root: {
         files: [
           {expand: true, cwd: 'src/', src: ['*'], dest: 'build/', filter: 'isFile'}
@@ -158,7 +163,7 @@ module.exports = function(grunt) {
   // Load local tasks
   grunt.loadTasks('tasks'); // getWiki, docs tasks
 
-  grunt.registerTask('build', ['clean', 'copy', 'docs', 'docu', 'blog', 'concat']);
+  grunt.registerTask('build', ['clean', 'copy', 'docs', 'page', 'blog', 'concat']);
   grunt.registerTask('default', ['build', 'less:production']);
   grunt.registerTask('dev', ['build', 'less:development', 'jshint', 'connect', 'open', 'watch']);
   grunt.registerTask('test', ['nodeunit']);};
