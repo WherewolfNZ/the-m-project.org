@@ -10,12 +10,6 @@
 ## Community
 * [[Community]]
 
-## Whats inside
-* [[Overview]]
-* [[Getting Started]]
-* [[The generator]]
-* [[Roadmap]]
-
 ## The generator
 * [[Overview]]
 * [[Getting Started]]

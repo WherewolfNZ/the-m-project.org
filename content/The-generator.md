@@ -1,7 +1,7 @@
+# Hello yo
+> Running The-M-Project Absinthe generator.
 
-## Hello yo
-
-Espresso, the build tool for the verison 1.x of The-M-Project was great and did a good job, but it's time to say goodbye. Say hello to ```yo m``` our new build tool which based on [Grunt](http://gruntjs.com/) and [Yeoman](http://yeoman.io/).
+Espresso, the build tool for the version 1.x of The-M-Project was great and did a good job, but it's time to say goodbye. Say hello to ```yo m``` our new build tool which based on [Grunt](http://gruntjs.com/) and [Yeoman](http://yeoman.io/).
 
 ## 1. Run the generator
 Create a folder and name it after the application name and open it.

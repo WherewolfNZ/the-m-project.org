@@ -1,11 +1,11 @@
-# Data Handling - Models, Collections and Stores
-All data handling with models and collections are based on [backbone.js](http://backbonejs.org), so please see their website for all the basics.
+# Data handling: Models, collections and storage
+> All data handling with models and collections are based on [backbone.js](http://backbonejs.org), so check out their website for all the basics.
  
 ## M.Model
-Extends Backbone.Model for the use of an entity and store.
+Extends Backbone.Model for the use of an entity and storage.
 
 ### Extend
-**M.Model.extend(properties, [classProperties]) **
+  M.Model.extend(properties, [classProperties])
 
 A Simple example to use a specify your own id and validation (in plain Backbone syntax):
 
@@ -38,11 +38,10 @@ Of course you can do this also, but you can also use create:
 
 ### Persistence
 
-All the basics functions of manipulating and persisting Model data are also based on [backbone.js](http://backbonejs.org/#Model).
+All the basics functions of manipulating and persisting Model data are also based on [backbone.js](http://backbonejs.org/#Model). You can access model attributes using **set** and **get**, but the data will be only changed locally.
 
-You can access model attributes using **set** and **get**, but the data will be only changed locally.
-
-	model.set('lastname', 'Wurst'); // this only changes the model
+  // this only changes the model
+  model.set('lastname', 'Wurst');
 
 To *store* the data persistent, you can call **save**, this will create new or update changed data dependent on the existence of an id.
 
@@ -66,11 +65,7 @@ To *load* data you can call **fetch** on the model, this will replace all existi
 
 ### Using an LocalStorageStore
 
-Backbone calls Backbone.sync to persist data over a REST interface, by default M.Model / M.Collection does this nearly exact in the same way.
-
-But you also have the possibility to set a custom **Store** to override this to override where the data should go and come from.
-
-There are several stores coming with The-M-Project all based on M.Store.
+Backbone calls Backbone.sync to persist data over a REST interface, by default M.Model / M.Collection does this nearly exact in the same way. But you also have the possibility to set a custom **Store** to override this to override where the data should go and come from. There are several storages coming with The-M-Project all based on M.Store.
 
 Here is an simple example to store and load data to the local storage of the browser:
 
@@ -88,9 +83,7 @@ Here is an simple example to store and load data to the local storage of the bro
 		}
 	});
 
-Please note you need to the specify an **entity name** to tell the store a collection / table name to store the data to.
-
-Even though this works with a Model, in the most cases you will use a Collection to persist your Models in a Store.
+Please note you need to the specify an **entity name** to tell the store a collection / table name to store the data to, even though this works with a Model, in the most cases you will use a Collection to persist your Models in a Store.
 
 ### Specifying fields
 
@@ -113,9 +106,7 @@ In this example the model will transform the attribute name 'sureName' to 'USERN
 
 ## M.Entity
 
-The Entity is used to describe Model attributes in more detail, the specified fields are used to transform names and types to and from a store.
-
-The Entity name is used by is used by the stores all models on the same place.
+The Entity is used to describe Model attributes in more detail, the specified fields are used to transform names and types to and from a store. The Entity name is used by is used by the stores all models on the same place.
 
 If only an Entity name is required, you can write it short hand like this:
 
@@ -123,9 +114,7 @@ If only an Entity name is required, you can write it short hand like this:
 		entity: 'myEntityName'
 	})
 	
-For a full Entity see the Model sample above.
-
-If Needed you can use an Entity also by its own like this:
+For a full Entity see the Model sample above. If Needed you can use an Entity also by its own like this:
 
 	var myEntity = M.Entity.design({  // short version for extend + create
         	name: 'test',
@@ -148,7 +137,7 @@ To transform attributes you can call:
     
     console.log(data);
         
-`Object {_id: "1000", USERNAME: "Nachname", age: 33, birthday: Moment}`
+```Object {_id: "1000", USERNAME: "Nachname", age: 33, birthday: Moment}```
 
 The reverse way only converts the field name ('USERNAME' to 'name' in this example):
 
@@ -239,9 +228,7 @@ or create and persist the model in one call
 	
 ### Using an M.WebSqlStore
 
-If you want to persist your data in an other way then by REST calls, you can provide a custom store.
-
-In the following example the data will be loaded and stored in a WebSql Database of the browser.
+If you want to persist your data in an other way then by REST calls, you can provide a custom store. In the following example the data will be loaded and stored in a WebSql Database of the browser.
 
 	var webSqlStore = M.WebSqlStore.create();
 	var people = M.Collection.design({
@@ -291,9 +278,7 @@ If you want to use your own or an existing columns you can specify them in an En
 		}
 	);
 	
-This will create a Database named 'myDatabase', the table 'myTable' with the columns 'MyId', 'FirstName' and 'LastName'.
-
-The Table will only be created if it not already exists, and only the existing columns will be filled with data.
+This will create a Database named 'myDatabase', the table 'myTable' with the columns 'MyId', 'FirstName' and 'LastName'. The Table will only be created if it not already exists, and only the existing columns will be filled with data.
 If you need to change the schema of your data, you need to drop the table or alter it by yourself.
 
 To drop the table you can change the version wich will drop all tables in the database or call
@@ -304,9 +289,7 @@ To drop the table you can change the version wich will drop all tables in the da
 
 ## M.BikiniStore
 
-Tataahh!! here we come to the coolest store ever ;)
-
-Bikini tries to address the most common synchronization problems you have in a Mobile App, in short you get offline / online synchronization and live updates of your collection.
+Tataahh!! here we come to the coolest store ever ;) Bikini tries to address the most common synchronization problems you have in a Mobile App, in short you get offline / online synchronization and live updates of your collection.
 
 The use is quiet simple, in the easiest configuration you can use it like this:
 
@@ -320,9 +303,5 @@ The use is quiet simple, in the easiest configuration you can use it like this:
 		})
 	});
 
-Thats it, now you can use it like any other collection.
-
-On **fetch** the changes or initial data will be loaded from the server but reads go always to the local data first (if useLocalStore is not set to false)
-
-All **create** and **save** calls write also first to the local store and then to a log and the server if possible, if not the changes will be sent from the log when the client comes online again.
+That's it, now you can use it like any other collection. On **fetch** the changes or initial data will be loaded from the server but reads go always to the local data first (if useLocalStore is not set to false). All **create** and **save** calls write also first to the local store and then to a log and the server if possible, if not the changes will be sent from the log when the client comes online again.
 

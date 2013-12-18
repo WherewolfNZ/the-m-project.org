@@ -101,6 +101,17 @@ module.exports = function (grunt) {
     grunt.file.write('build/blog.html', blogOut);
 
     /**
+     * Generate imprint
+     */
+    grunt.log.ok('Generating imprint page...');
+    var imprintTpl = 'src/tmpl/imprint.jade';
+    var imprintOut = jade.compile(grunt.file.read(imprintTpl), {filename:imprintTpl})({
+      page:'imprint',
+      news:shortList.splice(0, 5)
+    });
+    grunt.file.write('build/imprint.html', imprintOut);
+
+    /**
      * Generate the front page
      */
     grunt.log.ok('Generating the front page...');

@@ -12,6 +12,7 @@ block content
           | &nbsp;
           if(headline_bottom_link)
             a(href= headline_bottom_link.link ? headline_bottom_link.link : '')= headline_bottom_link.text ? headline_bottom_link.text : ''
+              | &nbsp;&rarr;
   section
     .container
       .row(class=locals.pageSegment)

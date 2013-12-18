@@ -2,6 +2,7 @@
 
 // Here you can override any bootstrap variables
 @white: #FFF;
+@black: #333;
 @white-25: rgba(255, 255, 255, 0.25);
 @orange: #ECB13B;
 @grey-text: #636363;
@@ -47,5 +48,16 @@
   &:focus {
     text-decoration: none;
     color: darken(@blue-links, 20%);
+  }
+}
+
+.link-index {
+  color: @white;
+  .transition(color 0.5s 0s);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @orange;
   }
 }
