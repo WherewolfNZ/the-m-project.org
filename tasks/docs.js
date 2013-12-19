@@ -42,7 +42,7 @@ module.exports = function( grunt ) {
             headline_bottom: 'Get started with The-M-Project:',
             headline_bottom_link: {
               text: 'Read The-M-Project docs',
-              link: 'http://apps.the-m-project.org/docs/absinthe/'
+              link: 'http://www.the-m-project.org/docs/absinthe/'
             }
           },
 
