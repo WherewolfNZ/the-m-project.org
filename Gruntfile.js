@@ -78,13 +78,14 @@ module.exports = function(grunt) {
 
     concat: {
       // if we add more js, modify this properly
-      vendor: {
-        src: [
-          'bower_components/jquery/jquery.min.js',
-          'bower_components/bootstrap/dist/js/bootstrap.min.js'
-        ],
-        dest: 'build/js/vendor.js'
-      },
+      //      vendor: {
+      //        src: [
+      //          'bower_components/jquery/jquery.min.js',
+      //          'bower_components/bootstrap/dist/js/bootstrap.min.js',
+      //          'bower_components/bootstrap/dist/js/bootstrap.min.js'
+      //        ],
+      //        dest: 'build/js/vendor.js'
+      //      },
       page: {
         src: [
           'src/js/*.js'
@@ -92,6 +93,22 @@ module.exports = function(grunt) {
         dest: 'build/js/page.js'
       }
     },
+
+    uglify:{
+      production:{
+        files:{
+          'build/js/vendor.min.js':[
+                              'bower_components/jquery/jquery.js',
+                              'bower_components/bootstrap/dist/js/bootstrap.js',
+                              'bower_components/intentionjs/intention.js',
+                              'bower_components/intentionjs/context.js'
+                               ],
+          'build/js/page.min.js': ['src/js/*.js']
+
+        }
+      }
+    },
+
     jshint: {
       all: ['Gruntfile.js', 'tasks/*.js'],
       options: {
@@ -158,7 +175,7 @@ module.exports = function(grunt) {
   // Load local tasks
   grunt.loadTasks('tasks'); // getWiki, docs tasks
 
-  grunt.registerTask('build', ['clean', 'copy', 'docs', 'blog', 'concat']);
+  grunt.registerTask('build', ['clean', 'copy', 'docs', 'blog', 'concat', 'uglify']);
   grunt.registerTask('default', ['build', 'less:production']);
   grunt.registerTask('dev', ['build', 'less:development', 'jshint', 'connect', 'open', 'watch']);
   grunt.registerTask('test', ['nodeunit']);};
