@@ -1,8 +1,9 @@
 {
-  "name": "the-m-project-org",
+  "name": "the-m-project.org",
   "version": "0.0.0",
   "dependencies": {
-    "themproject": "2.0.0-beta"
-  },
-  "devDependencies": {}
+    "bootstrap": "~3.0.3",
+    "modernizr": "~2.7.1",
+    "intentionjs": "~0.9.9"
+  }
 }
