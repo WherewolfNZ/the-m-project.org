@@ -4,6 +4,7 @@
   "dependencies": {
     "bootstrap": "~3.0.3",
     "modernizr": "~2.7.1",
-    "intentionjs": "~0.9.9"
+    "intentionjs": "~0.9.9",
+    "underscore": "~1.5.2"
   }
 }

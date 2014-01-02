@@ -98,10 +98,11 @@ module.exports = function(grunt) {
       production:{
         files:{
           'build/js/vendor.min.js':[
+                              'bower_components/underscore/underscore.js', //intention.js depends on it
                               'bower_components/jquery/jquery.js',
                               'bower_components/bootstrap/dist/js/bootstrap.js',
-                              'bower_components/intentionjs/intention.js',
-                              'bower_components/intentionjs/context.js'
+                              'bower_components/intentionjs/intention.js', //retina img support
+                              'bower_components/intentionjs/context.js' //retina img support
                                ],
           'build/js/page.min.js': ['src/js/*.js']
 
