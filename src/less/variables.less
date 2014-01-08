@@ -40,6 +40,18 @@
   background-image: @background-image, linear-gradient(top, @startColor, @endColor);
 }
 
+.gradient-with-image-retina(@startColor: @index-gradient-color-top, @endColor: @index-gradient-color-bottom, @background-image: url('/img/honeycomb@2x.png')) {
+  background: @startColor;
+  background-image: @background-image;
+  background-image: @background-image, -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background-image: @background-image, -webkit-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, -moz-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, -ms-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, -o-linear-gradient(top, @startColor, @endColor);
+  background-image: @background-image, linear-gradient(top, @startColor, @endColor);
+  background-size: 79px 74px, 100% 100%;
+}
+
 .link {
   color: @blue-links;
   .transition(color 0.5s 0s);

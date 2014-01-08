@@ -10,7 +10,7 @@ html(lang='en')
     link(rel='shortcut icon', href='../img/Favicon.png', type='image/x-icon')
   body(class=locals.page ? 'page-' + locals.page + (locals.page === 'index' ? '' : ' page-secondary') : '')
     include blocks/header
-    .index-content
+    .index-content(intent in-highres-class='index-content retina')
       block content
     script(src='/js/vendor.min.js')
     script(src='/js/page.min.js')
